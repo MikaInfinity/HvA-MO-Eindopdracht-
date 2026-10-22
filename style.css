@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    background: url(assets/Eind_Loop_Bottomv4.png) repeat-y center top;
+    background-size: 100% auto;
+}
+/*repeat-y hier omdat het effectief 2 foto's zijn, de originele met het kraaijennest, haaienfin etc... en dan de water achtergrond die looped*/
+
+.mainbg img {
+    width: 100%;
+    height: auto;
+}
+
+.text1 {
+    background: #a6ecfd;
+    /*Deze kleur is gebaseerd op een wittere tint van mijn skyblue achtergrond op de index pagina (vormgeving) */
+    border: 4px solid black;
+    border-radius: 5vh;
+    padding: 2vh;
+    
+    margin-left: 20%;
+    margin-right: 5%;
+}
+
+/* ik heb mijn texten een net ietsjes off-white kleur gegeven, dat blend net ietsjes lekkerder met het blauw + het is net ietsjes minder fel op dark-mode gebruikers*/
+
+.text2 {
+    background: #a6ecfd;
+    border: 4px solid black;
+    border-radius: 5vh;
+    padding: 2vh;
+
+    margin-left: 20%;
+    margin-right: 5%;
+}
+
+.windgust {
+display: grid; place-items: center;
+padding-top: 50px;
+}
+/*Dit stukje hierboven van windgust heb ik wel zelf geschreven^^*/
+
+.windgust #wind-strands {
+  animation: gust 8s ease-in-out infinite;
+}
+/*  De windgusts hier zijn het enigste stukje van al mijn assets dat met AI gemaakt is, inclusief de code. Los van dat ik wou zien wat het verschil was tussen met de hand geschreven 
+    animatie ten opzichte van door de computer gegenereerde, wist ik hiervoor niet dat je de hele SVG's kon maken in HTML, heel bizar, en iets dat ik voor nu nog liever niet zelf ga doen haha. Procreate werkt prima. */
+@keyframes gust {
+  0%, 100% { 
+    translate: -12px 0; 
+    opacity: .25; 
+  }
+  50% { 
+    translate: 12px 0; 
+    opacity: 1; 
+  }
+}
+
+
+.haai-track {
+  animation: move 5s ease-in-out infinite alternate;
+}
+
+.haai {
+  width: 100px;
+  animation: face 10s steps(1, end) infinite;
+}
+
+@keyframes move {
+  from { translate: 20vh 0; }
+  to   { translate: 90vh 0; }
+}
+/*  Mijn god wat heeft dit stukje hieronder mij veel ellende gegeven, ik had voor de langste tijd niet door dat het 2 losse animaties moesten zijn.
+    Het MOEST voor mij gewoon draaien op de zijkant, het zag er voorheen uit als een dronken haai namelijk...*/
+@keyframes face {
+  0%, 49.99% { scale: -1 1; }
+  50%, 99.99% { scale: 1 1; }
+}
