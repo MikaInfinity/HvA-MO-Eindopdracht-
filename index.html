@@ -6,72 +6,105 @@
     <title>The High Seas</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <section class="mainbg">
-    <img src="assets/Main Background.png">
-    </section>
-    <section class="text1">
-        <h2>Wie ben ik in dit dilemma?</h2>
+<body class="mainbody">
+
+<input type="checkbox" id="Stap-aan-boord" class="overlay-toggle">
+
+<label for="Stap-aan-boord" class="siteoverlay">
+  <div class="overlaypagina">
+    <h1>Klik om aan boord te komen!</h1>
+  </div>
+</label>
+
+<section class="windgust">
+  <img src="assets/MainBackgroundv3.png" alt="Piraten Kraaiennest, een man met een telescoop en papegaai, die een haai bekijkt">
+
+<div class="container">
+    <h1 class="titel-wave">
+        <span>S</span>
+        <span>t</span>
+        <span>e</span>
+        <span>l</span>
+        <span>e</span>
+        <span>n</span>
+        <span class="word-space">o</span>
+        <span>f</span>
+        <span class="word-space">D</span>
+        <span>e</span>
+        <span>l</span>
+        <span>e</span>
+        <span>n</span>
+        <span>?</span>
+    </h1>
+</div>
+
+
+  <svg viewBox="0 0 500 140" preserveAspectRatio="none">
+    <g id="wind-strands" fill="none" stroke="#fff"
+       stroke-width="6" stroke-linecap="round">
+      <path d="M-10 40 Q45 12 100 38 T205 36 T310 42 T420 28 T520 32"/>
+      <path d="M-10 68 Q55 42 115 68 T230 62 T340 74 T520 54"/>
+      <path d="M-10 94 Q50 74 110 94 T220 89 T335 97 T460 85"/>
+      <!--Dit plus het toebehorende stukje CSS zijn het enigste gedeelte van mijn code dat met behulp van AI is gedaan, dit was vooral om te testen hoe een SVG animatie maken binnen html/css van ze gang ging.-->
+    </g>
+  </svg>
+</section>
+
+<!--ik heb het gespam van <br> gecorrigeerd door een padding-bottom te gebruiken in de css op windgust inmiddels^^ dit was gewoon ff snel eerder-->
+
+<div class="loopbg">
+    <main>
+<!--deze achtergrond zorgde ervoor dat er bij elke kleine verandering altijd iets verschoof, vandaar dat het nu onder de main achtergrond een eigen div is, om dit te voorkomen.-->
+    <section class="textinfo">
+            
+            <h2 tabindex="0">Wie ben ik in dit dilemma?</h2>
         <p>
             Waarom zou ik delen dat ik online stelen support? Is dat niet heel tegenstrijdig, het geeft meer aandacht aan iets waarbij je dat typisch bij ordinair stelen* juist niet zou willen.
             Ik refereer je graag door naar de populaire internet slogan “If buying isn’t owning, piracy isn’t stealing”. 
-            <br><br>
-            De slogan benadrukt de oneerlijkheid met hoe digitale licenties werken. 
+        </p>
+        <p>
+            De slogan benadrukt de oneerlijkheid met hoe digitale licenties (niet) werken. 
             Ikzelf ben het hier ook mee eens, ik koop al jaren mijn media fysiek, en sla dingen ook gewoon over als er geen release is waarbij ik garantie heb dat het product daadwerkelijk van mij is. 
             Veel mensen staan zich hier niet bij stil, maar we hebben er allemaal direct mee te maken. 
-            <br><br>
+        </p>
+        <p>
             Of het nou je premium versie is van een app die vervangen is voor een subscription model, of een game die alleen digitaal beschikbaar is, het is allemaal niet van jou.
-            Mocht jij dus iets doen waar het bedrijf waarvan je het vandaan hebt het niet eens is, kan het dus zo zijn dat jij toegang verliest nadat je al betaald hebt voor deze dingen.
+            Mocht jij dus iets doen waar het bedrijf waarvan je het vandaan 'koopt' het niet eens is, kan het zo zijn dat jij toegang verliest nadat je al betaald hebt voor deze dingen.
             Zonder woorden er aan te sparen, ik vind dit gewoon super kut, en ontzettend oneerlijk!
-            <br><br>
+        </p>
+        <p>
             Wat zou ik dan eigenlijk anders doen? Om te beginnen, het concept van online licenties schrappen. 
             Dus gewoon betalen = het is van jou. Weg met al die zielige trucjes waarbij je abrupt maandelijks een verhoogd bedrag moet betalen, omdat een bedrijf heeft besloten dat ze bepaalde features niet meer willen bieden voor het huidige tarief. 
             Daarnaast het behoud van anonimiteit op het net. Vergelijkbaar met het 1e en 4e amendement van de Amerikaanse grondwet, zou dit wereldwijd een recht moeten zijn. 
             Zo voorkomen we dat onze stem wordt ontnomen wanneer een groot bedrijf, of een overheid ons de mogelijkheid ontneemt om informatie te distribueren.
-
         </p>
     </section>
     
 
-<section class="windgust">
-  <svg viewBox="0 0 500 140" width="100%">
-    <g id="wind-strands" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <g stroke="#9befff" stroke-width="9">
-        <path d="M-10 40 Q45 12 100 38 T205 36 T310 42 T420 28 T520 32"/>
-        <path d="M-10 68 Q55 42 115 68 T230 62 T340 74 T520 54"/>
-        <path d="M-10 94 Q50 74 110 94 T220 89 T335 97 T460 85"/>
-      </g>
-      <g stroke="#36bde8" stroke-width="3">
-        <path d="M-10 40 Q45 12 100 38 T205 36 T310 42 T420 28 T520 32"/>
-        <path d="M-10 68 Q55 42 115 68 T230 62 T340 74 T520 54"/>
-        <path d="M-10 94 Q50 74 110 94 T220 89 T335 97 T460 85"/>
-      </g>
-    </g>
-    
-  </svg>
-  </section>
-
-<!--ik ben bewust dat er hier een padding kan, dit was gewoon even terwijl ik bezig was het snelste zonder de flow te ruineren-->
-    <br><br><br>
-
-
-<section class="text2">
-        <h2>Maar wat is Piracy nou eigenlijk?</h2>
-        <i>“Piracy (ook wel digitale of internet-piraterij genoemd) is het zonder toestemming downloaden, uploaden, verspreiden, kopiëren of streamen van auteursrechtelijk beschermd materiaal via het internet.”</i>
-        <br><br>
+<section class="textinfo">
+        <h2 tabindex="0">Maar wat is Piracy nou eigenlijk?</h2>
+        <p>
+        <em>“Piracy (ook wel digitale of internet-piraterij genoemd) is het zonder toestemming downloaden, uploaden, verspreiden, kopiëren of streamen van auteursrechtelijk beschermd materiaal via het internet.”</em>
+        </p>
+        <p>
         En wat is een betere manier van uitleggen wat het verder is, dan je gewoon te leren hoe het moet? Je hebt eigenlijk maar 2 dingen nodig; een Torrent client (BitTorrent) en een internet connectie. 
         Een torrent client is een stukje software dat helpt met P2P bestanden ophalen/delen (ook wel seeden genoemd), de internet-connectie voor het vinden van je torrents om te downloaden/seeden.
-        <br><br>
+        </p>
+        <p>
         Nu je alles hebt wat je nodig hebt om te beginnen, ga je simpel naar een plek zoals FMHY.net of de r/piracy subreddit die je veilige bronnen voor deze torrents bieden, 
         zoek hetgene wat je wilt hebben (denk hier aan een film, muziek of software bijvoorbeeld), klik op de magnet torrent knop, en je bent al zo goed als klaar.
         Het enigste wat je op dit punt nog hoeft te doen is wachten tot je download gereed is, deze te verwijderen uit je torrent client, en je bent nu (on)officieel een internet piraat!
-
+        </p>
 </section>
+    </main>
     
-    
-    <div class="haai-track">
-        <img src="assets/Haai_Loop.png" class="haai">
+    <div class="haai-loop">
+        <img src="assets/Haai_Loop.png" alt="Een haai die van links naar rechts zwemt" class="haai">
     </div>
     <!--dit wou ik met de hand animeren, maar holy moly wat heeft het mij een gedoe gekost dat ik per se wou dat de haai zich omdraaide wanneer het de zijkant raakte... Meer info hierover op mijn style file-->
+    <footer>
+    <a href="bron.html">Bronnen &amp; Begrippen</a>
+</footer>
+</div>
 </body>
 </html>

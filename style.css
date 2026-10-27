@@ -1,62 +1,207 @@
 body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  position: absolute;
+  top: 30%;
+  justify-content: center;
+  width: 100%;
+  z-index: 3;
+  font-family: cezanne;
+  color: #2D2E2D;
+  text-shadow: 10px 10px 20px black;
+}
+/*Text shadow voor betere leesbaarheid, text kleur is dezelfde als de vlag kleur, meer samenhang hierdoor.*/
+
+h1 {
+  font-family: cezanne;
+}
+
+h2 {
+  font-family: cezanne;
+}
+p {
+  font-family: block ride;
+  font-size: large;
+}
+
+.titel-wave {
+  display: flex;
+  font-size: 5rem;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0;
+}
+
+.titel-wave span {
+  animation: wave 3.9s ease-in-out infinite;
+}
+
+.titel-wave span:nth-child(1) {
+  animation-delay: 0s;
+}
+.titel-wave span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.titel-wave span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.titel-wave span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.titel-wave span:nth-child(5) {
+  animation-delay: 0.8s;
+}
+.titel-wave span:nth-child(6) {
+  animation-delay: 1s;
+}
+.titel-wave span:nth-child(7) {
+  animation-delay: 1.2s;
+}
+.titel-wave span:nth-child(8) {
+  animation-delay: 1.4s;
+}
+.titel-wave span:nth-child(9) {
+  animation-delay: 1.6s;
+}
+.titel-wave span:nth-child(10) {
+  animation-delay: 1.8s;
+}
+.titel-wave span:nth-child(11) {
+  animation-delay: 2s;
+}
+.titel-wave span:nth-child(12) {
+  animation-delay: 2.2s;
+}
+.titel-wave span:nth-child(13) {
+  animation-delay: 2.4s;
+}
+.titel-wave span:nth-child(14) {
+  animation-delay: 2.6s;
+}
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  
+}
+
+
+
+.word-space {
+    margin-left: 0.5rem;
+}
+
+
+.loopbg {
     margin: 0;
     background: url(assets/Eind_Loop_Bottomv4.png) repeat-y center top;
     background-size: 100% auto;
 }
 /*repeat-y hier omdat het effectief 2 foto's zijn, de originele met het kraaijennest, haaienfin etc... en dan de water achtergrond die looped*/
+.bronbody {
+  margin: 0;
+}
 
-.mainbg img {
+.bgimg {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+}
+
+.bgimg > img {
+    display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
+    grid-area: 1 / 1;
+    object-fit: cover;
+    object-position: top;
 }
 
-.text1 {
+.bgimg .textBB {
+    position: relative;
+    grid-area: 1 / 1;
+    align-self: start;
+    justify-self: start;
+
+    width: 70%;
+    margin: 75px 0 30px 10%;
+    box-sizing: border-box;
+
+    z-index: 1;
+}
+
+.textinfo {
     background: #a6ecfd;
-    /*Deze kleur is gebaseerd op een wittere tint van mijn skyblue achtergrond op de index pagina (vormgeving) */
     border: 4px solid black;
     border-radius: 5vh;
     padding: 2vh;
-    
+
     margin-left: 20%;
     margin-right: 5%;
+    margin-bottom: 50px;
+
+    box-shadow: 2px 2px 0 #000;
 }
 
-/* ik heb mijn texten een net ietsjes off-white kleur gegeven, dat blend net ietsjes lekkerder met het blauw + het is net ietsjes minder fel op dark-mode gebruikers*/
-
-.text2 {
-    background: #a6ecfd;
+.textBB {
+    background: #BCD7F4;
     border: 4px solid black;
     border-radius: 5vh;
     padding: 2vh;
+    opacity: 90%;
 
-    margin-left: 20%;
+    margin-top: 75px;
+    margin-left: 5%;
     margin-right: 5%;
+
+    box-shadow: 2px 2px 0 #000;
 }
 
-.windgust {
-display: grid; place-items: center;
-padding-top: 50px;
-}
-/*Dit stukje hierboven van windgust heb ik wel zelf geschreven^^*/
 
-.windgust #wind-strands {
+.windgust img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.windgust svg {
+  opacity: 0.4;
+  padding-top: 400px;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 30%;
+  z-index: 2;
+}
+
+#wind-strands {
   animation: gust 8s ease-in-out infinite;
 }
-/*  De windgusts hier zijn het enigste stukje van al mijn assets dat met AI gemaakt is, inclusief de code. Los van dat ik wou zien wat het verschil was tussen met de hand geschreven 
-    animatie ten opzichte van door de computer gegenereerde, wist ik hiervoor niet dat je de hele SVG's kon maken in HTML, heel bizar, en iets dat ik voor nu nog liever niet zelf ga doen haha. Procreate werkt prima. */
+
 @keyframes gust {
-  0%, 100% { 
-    translate: -12px 0; 
-    opacity: .25; 
+  0%, 100% {
+    translate: -12px 0;
+    opacity: 0.25;
   }
-  50% { 
-    translate: 12px 0; 
-    opacity: 1; 
+  50% {
+    translate: 12px 0;
+    opacity: 1;
   }
 }
 
+html, body {
+  overflow-x: hidden;
+}
 
-.haai-track {
+.haai-loop {
   animation: move 5s ease-in-out infinite alternate;
 }
 
@@ -66,12 +211,106 @@ padding-top: 50px;
 }
 
 @keyframes move {
-  from { translate: 20vh 0; }
-  to   { translate: 90vh 0; }
+  from { translate: 20% 0; }
+  to   { translate: 90% 0; }
 }
 /*  Mijn god wat heeft dit stukje hieronder mij veel ellende gegeven, ik had voor de langste tijd niet door dat het 2 losse animaties moesten zijn.
     Het MOEST voor mij gewoon draaien op de zijkant, het zag er voorheen uit als een dronken haai namelijk...*/
 @keyframes face {
   0%, 49.99% { scale: -1 1; }
   50%, 99.99% { scale: 1 1; }
+}
+
+footer{
+  padding-top: 20px;
+  text-align: center;
+  padding-bottom: 20px;
+  font-family: block ride;
+}
+
+footer a {
+    display: inline-block; 
+    place-items: center;
+    background-color: #AE7B2B;
+    color: #000;
+    text-decoration: none;
+
+    padding: 12px 24px;
+    border: 3px solid #000;
+    border-radius: 12px;
+
+    font-size: 18px;
+
+    box-shadow: 4px 4px 0 #000;
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease,
+                background-color 0.2s ease;
+}
+
+/*Op advies van Hannah dit stukje voor de knop met behulp van een youtube tutorial gemaakt, 
+  ik had moeite met de footer een prettig uitziende overloop te geven van het daadwerkelijk stukje website erboven, de kleuren zijn gebasseerd op mijn bestaande huismerk.
+  Dit was oorspronkelijk gewoon een horizontale bar met een hyperlink, maar ik vond het er niet prettig uitzien en liep daardoor nogal vast. Bleek dat die bar weglaten in plaats voor een knop veel mooier uitkwam, 
+  iets waar ik simpelweg te ingewikkeld voor over na aan het denken was.*/
+
+footer a:hover {
+    background-color: #C9943D;
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 #000;
+}
+
+footer a:active {
+    transform: translate(4px, 4px);
+    box-shadow: none;
+}
+
+footer a:focus-visible {
+    outline: 3px solid #a6ecfd;
+    outline-offset: 4px;
+}
+li {
+  list-style-type: none;
+  font-family: block ride;
+}
+
+
+.overlay-toggle {
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.siteoverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #2797FF;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 5s ease, visibility 5s ease;
+}
+
+.overlaypagina h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.overlaypagina p {
+  font-size: 1.2rem;
+}
+
+.overlay-toggle:checked + .siteoverlay {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
